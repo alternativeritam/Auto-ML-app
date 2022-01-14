@@ -21,26 +21,18 @@ value = st.selectbox("select option", options=list(PAGES.keys()))
 page = PAGES[value]
 if uploaded_file is not None:
     if value == "Algortihm selection":
-        f=pd.read_csv("data/new.csv")
-        if  f.empty:
-            page.app1(uploaded_file)
-        else:
-            page.app1(f)
+        #f=pd.read_csv("data/new.csv")
+
+        page.app1(uploaded_file)
     elif value == "Data Exploration":
-        f=pd.read_csv("data/new.csv")
-        if f.empty:
-            page.app3(uploaded_file)
-        else:
-            page.app3(f)
+        #f=pd.read_csv("data/new.csv")
+        page.app3(uploaded_file)
     elif value == "Data visualization":
-        f=pd.read_csv("data/new.csv")
-        if f.empty:
-            page.app4(uploaded_file)
-        else:
-            page.app4(f)
+        #f=pd.read_csv("data/new.csv")
+        page.app4(uploaded_file)
     else:
         f = page.app2(uploaded_file)
-        f.to_csv("data/new.csv",index=False)
+        #f.to_csv("data/new.csv",index=False)
 
 
 

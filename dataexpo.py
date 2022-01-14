@@ -22,8 +22,4 @@ def app3(uploaded_file):
     pr = ProfileReport(df, explorative=True)
     st.header('**Pandas Profiling Report(Exploratory data Analysis)**')
     st_profile_report(pr)
-def app3(df):
-    warnings.filterwarnings("ignore")
-    pr = ProfileReport(df, explorative=True)
-    st.header('**Pandas Profiling Report(Exploratory data Analysis)**')
-    st_profile_report(pr)
+

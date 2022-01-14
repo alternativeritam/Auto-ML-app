@@ -17,10 +17,10 @@ import warnings
 
 
 def app4(uploaded_file):
-
-    st.set_option('deprecation.showPyplotGlobalUse', False)
-    warnings.filterwarnings("ignore")
     df = pd.read_csv(uploaded_file)
+    st.set_option('deprecation.showPyplotGlobalUse', False)
+    warnings.filterwarnings("ignore")
+    #df = pd.read_csv(uploaded_file)
     st.write("**Overview of Dataset**")
     cor = st.checkbox("Correlation Matrix")
     if cor:
@@ -61,7 +61,7 @@ def app4(uploaded_file):
     if his_graph:
         df.hist(alpha=0.5, figsize=(20, 10))
         st.pyplot()
-def app4(df):
+'''def app4(df):
 
     st.set_option('deprecation.showPyplotGlobalUse', False)
     warnings.filterwarnings("ignore")
@@ -104,4 +104,4 @@ def app4(df):
     his_graph = st.checkbox("Histogram")
     if his_graph:
         df.hist(alpha=0.5, figsize=(20, 10))
-        st.pyplot()
+        st.pyplot()'''

@@ -416,7 +416,7 @@ def app1(uploaded_file):
     col_list = list(df.columns)
     label = st.selectbox("Select the label", col_list)
     build_model(df, model, split_size, seed_number, label)
-def app1(df):
+'''def app1(df):
     st.set_option('deprecation.showPyplotGlobalUse', False)
     #---------------------------------#
     # Page layout
@@ -446,4 +446,4 @@ def app1(df):
     st.write(df)
     col_list = list(df.columns)
     label = st.selectbox("Select the label", col_list)
-    build_model(df, model, split_size, seed_number, label)
+    build_model(df, model, split_size, seed_number, label)'''
